@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>Muhammad Noman Khan · Graphic Designer</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font: Inter + Fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    /* ========== STYLES ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 20% 30%, #0b1423, #030812);
+      background-color: #050a14;
+      color: #eef2fb;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      width: 60vw;
+      height: 60vw;
+      top: -10vh;
+      right: -10vw;
+      background: radial-gradient(circle, rgba(0,180,255,0.02) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      width: 80vmax;
+      height: 80vmax;
+      left: -20%;
+      bottom: -10%;
+      background: radial-gradient(circle, rgba(0,150,255,0.015) 0%, transparent 80%);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .thin-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .thin-lines span {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: rgba(0, 191, 255, 0.06);
+      left: 15%;
+    }
+    .thin-lines span:nth-child(2) { left: 40%; width: 1px; background: rgba(0,191,255,0.04); }
+    .thin-lines span:nth-child(3) { left: 70%; width: 1px; background: rgba(0,191,255,0.03); }
+    .thin-lines span:nth-child(4) { left: 90%; width: 1px; background: rgba(0,191,255,0.02); }
+    .thin-lines span:nth-child(5) { left: 5%; width: 1px; background: rgba(0,191,255,0.02); }
+    .thin-lines hr {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: rgba(0,191,255,0.05);
+      border: none;
+      top: 30%;
+    }
+    .thin-lines hr:nth-child(7) { top: 70%; background: rgba(0,191,255,0.03); }
+    .thin-lines hr:nth-child(8) { top: 85%; background: rgba(0,191,255,0.02); }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 30px;
+      position: relative;
+      z-index: 10;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0 20px;
+      flex-wrap: wrap;
+      animation: fadeDown 0.9s ease;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(to right, #fff, #c7e4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-links {
+      display: flex;
+      gap: 38px;
+      font-weight: 500;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #d2e5ff;
+      font-size: 0.98rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #3eaaff; }
+    .lets-talk {
+      background: rgba(0, 140, 255, 0.12);
+      padding: 12px 28px;
+      border-radius: 40px;
+      color: #a3dcff !important;
+      border: 0.5px solid rgba(0,180,255,0.3);
+      backdrop-filter: blur(2px);
+      transition: 0.2s;
+    }
+    .lets-talk:hover {
+      background: #0077ff;
+      color: white !important;
+      border-color: #0077ff;
+    }
+    .btn-blue {
+      background: #0077ff;
+      border: none;
+      border-radius: 50px;
+      padding: 16px 38px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 20px rgba(0,119,255,0.25);
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .btn-blue i { font-size: 1.1rem; }
+    .btn-blue:hover {
+      background: #0060dd;
+      transform: scale(1.02);
+      box-shadow: 0 14px 28px rgba(0,119,255,0.35);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(0,180,255,0.5);
+      border-radius: 40px;
+      padding: 14px 32px;
+      color: white;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+    .btn-outline:hover {
+      background: rgba(0,180,255,0.1);
+      border-color: #3eaaff;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 40px 0 80px;
+      align-items: center;
+    }
+    .hero-left .small-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #a0ceff;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .hero-left h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: white;
+      margin-bottom: 15px;
+    }
+    .blue-highlight {
+      color: #3aa8ff;
+      display: block;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: #b8d6ff;
+      max-width: 90%;
+      margin: 25px 0 30px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+    .social-icons {
+      display: flex;
+      gap: 18px;
+      margin-top: 30px;
+    }
+    .social-icons a {
+      background: rgba(255,255,255,0.04);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bee0ff;
+      font-size: 1.25rem;
+      border: 0.5px solid rgba(0,191,255,0.2);
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      background: #0077ff;
+      color: white;
+      border-color: #0077ff;
+      transform: translateY(-3px);
+    }
+    .hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .decor-line-bg {
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      top: -5%;
+      left: -5%;
+      z-index: 1;
+    }
+    .decor-line-bg span {
+      position: absolute;
+      width: 200px;
+      height: 2px;
+      background: rgba(0,191,255,0.15);
+      transform: rotate(-25deg);
+    }
+    .decor-line-bg span:nth-child(1) { top: 20px; left: -30px; width: 280px; }
+    .decor-line-bg span:nth-child(2) { bottom: 30px; right: -20px; width: 240px; transform: rotate(15deg); background: rgba(0,191,255,0.1); }
+    .decor-line-bg span:nth-child(3) { top: 50%; left: -40px; width: 150px; transform: rotate(45deg); background: rgba(0,191,255,0.08); }
+    .portrait-card {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #0d1a2b, #030c17);
+      padding: 12px;
+      box-shadow: 0 30px 40px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(0,180,255,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s;
+    }
+    .portrait-card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 40px 60px -15px #0055aa30;
+    }
+    .portrait-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      display: block;
+      object-fit: cover;
+    }
+    .adobe-strip {
+      background: rgba(10, 25, 45, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 80px;
+      padding: 30px 40px;
+      margin: 20px 0 70px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      border: 0.5px solid rgba(255,255,255,0.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: fadeUp 1s ease;
+    }
+    .adobe-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #b0e0ff;
+      transition: 0.2s;
+    }
+    .adobe-item i {
+      font-size: 2.4rem;
+      color: #31a8ff;
+    }
+    .adobe-item span {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+    .adobe-item:hover i { color: #9dc6ff; transform: scale(1.05); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      margin: 100px 0;
+      align-items: center;
+    }
+    .about-img {
+      background: #0a1624;
+      border-radius: 32px;
+      padding: 14px;
+      box-shadow: 0 25px 35px -10px black;
+    }
+    .about-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 28px;
+      display: block;
+    }
+    .about-right h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .about-right h2 span { color: #3aa8ff; }
+    .stats {
+      display: flex;
+      gap: 25px;
+      margin: 35px 0 30px;
+    }
+    .stat-card {
+      background: rgba(0,191,255,0.05);
+      padding: 24px 15px;
+      border-radius: 28px;
+      flex: 1;
+      backdrop-filter: blur(5px);
+      border: 0.5px solid rgba(0,191,255,0.1);
+      transition: 0.25s;
+      text-align: center;
+    }
+    .stat-card:hover {
+      background: rgba(0,119,255,0.1);
+      border-color: #3aa8ff;
+      transform: translateY(-6px);
+    }
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #aad0ff;
+    }
+    .portfolio-grid-wrapper {
+      margin: 80px 0 40px;
+      scroll-margin-top: 80px;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+      border-left: 6px solid #3aa8ff;
+      padding-left: 20px;
+    }
+    .category-block {
+      margin-bottom: 70px;
+    }
+    .category-title {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .category-title i {
+      color: #3aa8ff;
+      font-size: 1.9rem;
+    }
+    .project-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+    .project-card {
+      background: rgba(12, 25, 40, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: 24px;
+      padding: 16px;
+      border: 1px solid rgba(0,191,255,0.05);
+      box-shadow: 0 20px 30px -10px #00000050;
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .project-card:hover {
+      background: #0f1f32;
+      border-color: rgba(0,191,255,0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 32px 45px -10px #004a9930;
+    }
+    .project-img {
+      background: linear-gradient(145deg, #142a3b, #0a1a28);
+      border-radius: 18px;
+      height: 150px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #c1e1ff;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .project-img i { 
+      font-size: 2.8rem; 
+      opacity: 0.7;
+      margin-bottom: 6px;
+    }
+    .project-img span {
+      font-size: 0.75rem;
+      background: rgba(0,119,255,0.3);
+      padding: 4px 12px;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
+    .project-card h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: white;
+    }
+    .project-cat {
+      color: #8bc9ff;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .arrow-btn {
+      background: #0077ff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: 0.2s;
+    }
+    .project-card:hover .arrow-btn { background: #2590ff; }
+    .services-section {
+      margin: 100px 0;
+      scroll-margin-top: 80px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: rgba(8, 22, 40, 0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 32px;
+      padding: 40px 30px;
+      border: 1px solid rgba(0,191,255,0.08);
+      transition: 0.3s;
+      text-align: center;
+    }
+    .service-card:hover {
+      border-color: #3aa8ff;
+      background: rgba(0,119,255,0.08);
+      transform: translateY(-8px);
+    }
+    .service-card i {
+      font-size: 2.8rem;
+      color: #3aa8ff;
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      color: #b0d0ff;
+      font-size: 0.95rem;
+    }
+    .contact-section {
+      background: rgba(5,15,30,0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 60px;
+      padding: 60px 70px;
+      margin: 70px 0 60px;
+      border: 1px solid rgba(0,191,255,0.12);
+      box-shadow: 0 30px 50px -30px black;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      scroll-margin-top: 80px;
+    }
+    .contact-left h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .contact-email, .contact-wa {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 1.25rem;
+      background: rgba(255,255,255,0.02);
+      padding: 18px 26px;
+      border-radius: 60px;
+      margin: 15px 0;
+      border: 0.5px solid rgba(0,191,255,0.1);
+      transition: 0.15s;
+    }
+    .contact-email:hover, .contact-wa:hover {
+      background: rgba(0,119,255,0.1);
+      border-color: #3aa8ff;
+    }
+    .contact-email i, .contact-wa i {
+      font-size: 1.8rem;
+      color: #3aa8ff;
+    }
+    .contact-email a, .contact-wa a {
+      text-decoration: none;
+      color: #ecf7ff;
+      font-weight: 500;
+    }
+    .rights-footer {
+      text-align: center;
+      padding: 30px 0 40px;
+      color: #9cb8d9;
+      border-top: 0.5px solid rgba(0,191,255,0.1);
+      margin-top: 20px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    .rights-footer i {
+      color: #3aa8ff;
+      margin: 0 6px;
+    }
+    /* ===== FULLSCREEN IMAGE VIEWER ===== */
+    .fullscreen-viewer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .fullscreen-viewer.active {
+      display: flex;
+    }
+    .fullscreen-viewer img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(0,119,255,0.3);
+    }
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: white;
+      font-size: 3rem;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(0,119,255,0.2);
+    }
+    .close-btn:hover {
+      background: #0077ff;
+      transform: scale(1.1);
+    }
+    @keyframes fadeDown {
+      0% { opacity: 0; transform: translateY(-18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hero, .about-grid, .portfolio-grid-wrapper, .services-section, .contact-section {
+      animation: fadeUp 0.9s ease;
+    }
+    @media (max-width: 1100px) {
+      .project-grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .project-grid-4 { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .contact-section { padding: 40px 25px; }
+      .stats { flex-direction: column; }
+      .adobe-strip { gap: 30px; }
+      .close-btn { top: 20px; right: 20px; font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- thin horizontal & vertical decorative lines -->
+  <div class="thin-lines">
+    <span></span><span></span><span></span><span></span><span></span>
+    <hr><hr><hr>
+  </div>
+
+  <!-- ===== FULLSCREEN IMAGE VIEWER ===== -->
+  <div id="fullscreenViewer" class="fullscreen-viewer" onclick="closeFullscreen()">
+    <span class="close-btn" onclick="closeFullscreen(event)">&times;</span>
+    <img id="fullscreenImage" src="" alt="Fullscreen View">
+  </div>
+
+  <div class="container">
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+      <div class="logo">NOMAN.</div>
+      <div class="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT ME</a>
+        <a href="#portfolio">PROJECTS</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      <a href="#contact" class="lets-talk">LET'S TALK</a>
+    </nav>
+
+    <!-- ===== HOME SECTION ===== -->
+    <div id="home" class="hero" style="scroll-margin-top: 70px;">
+      <div class="hero-left">
+        <div class="small-label">MUHAMMAD NOMAN KHAN</div>
+        <h1>
+          HAY! I’M <br>MUHAMMAD NOMAN KHAN
+          <span class="blue-highlight">I’M A GRAPHIC DESIGNER</span>
+        </h1>
+        <p class="hero-desc">
+          I have strong knowledge and professional grip in Adobe Photoshop and Adobe Illustrator with 4 years of experience. I have successfully completed many creative design projects.
+        </p>
+        <a href="#contact" style="text-decoration: none;"><button class="btn-blue"><i class="fas fa-paper-plane"></i> GET IN TOUCH</button></a>
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/muhammadnoman-khan-07716628a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:muhammadnomankhan.mail@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="decor-line-bg">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="portrait-card">
+          <!-- 🔴🔴🔴 YOUR PORTRAIT IMAGE (816x1532 recommended) -->
+          <!-- REPLACE "ppppp.jpg" WITH YOUR ACTUAL PORTRAIT PHOTO -->
+          <img src="ppppp.jpg" alt="Muhammad Noman Khan - Graphic Designer">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <div id="about" class="about-grid" style="scroll-margin-top: 80px;">
+      <div class="about-img">
+        <!-- 🔴🔴🔴 YOUR ABOUT PAGE IMAGE -->
+        <!-- REPLACE "ppppp.jpg" WITH YOUR ABOUT PHOTO (any size) -->
+        <img src="ppppp.jpg" alt="about Muhammad Noman Khan">
+      </div>
+      <div class="about-right">
+        <h2>I AM AVAILABLE FOR <span>GRAPHIC DESIGN PROJECTS</span></h2>
+        <p style="color: #b8d6ff; font-size: 1.05rem; margin-bottom: 20px;">
+          I am Muhammad Noman Khan, a dedicated graphic designer and illustrator with over 4 years of professional experience. Skilled in Adobe Photoshop and Illustrator, I specialize in transforming ideas into visually striking and impactful designs.<br><br>
+          I offer expertise in:<br>
+          . Logo Design : Creating memorable brand identities<br>
+          . Character Design : Designing unique and expressive characters<br>
+          . Banner & Card Design : Crafting visually compelling marketing materials<br>
+          . Illustrations : From digital art to detailed custom graphics<br>
+          . CV & Resume Design : Designing professional and modern layouts<br><br>
+          I am committed to delivering creative solutions that combine aesthetic appeal with effective communication, helping brands and individuals make a lasting impression.
+        </p>
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">Adobe</div>
+            <div class="stat-label">Expert</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PORTFOLIO: 5 CATEGORIES, 4 IMAGES EACH ========== -->
+    <!-- 🟢🟢🟢  PLACE YOUR PORTFOLIO PROJECT IMAGES HERE  🟢🟢🟢 -->
+    <div id="portfolio" class="portfolio-grid-wrapper" style="scroll-margin-top: 80px;">
+      <h2 class="section-title">My latest Delivered Designs are shown below in the Portfolio.</h2>
+      
+      <!-- 1. BANNER DESIGN - 4 IMAGES -->
+      <div class="category-block">
+        <div class="category-title"><i class="fas fa-images"></i> Banner Design</div>
+        <div class="project-grid-4">
+          <!-- 🟢 BANNER 1 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR BANNER DESIGN IMAGE 1 -->
+              <!-- Example: <img src="your-banner1.jpg" alt="Banner 1"> -->
+                <img src="youtube banner (1).jpeg" alt="banner 1" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+    
+            </div>
+            <h4>Banner Design</h4>
+            <div class="project-cat">
+              <span>Social Media</span>
+              <span class="arrow-btn"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <!-- 🟢 BANNER 2 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR BANNER DESIGN IMAGE 2 -->
+                <img src="baa333.jpg" alt="banner 2" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Banner Design</h4>
+            <div class="project-cat">
+              <span>Web Banner</span>
+              <span class="arrow-btn"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <!-- 🟢 BANNER 3 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR BANNER DESIGN IMAGE 3 -->
+               <img src="banner3.jpg" alt="banner" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Banner Design</h4>
+            <div class="project-cat">
+              <span>Event</span>
+              <span class="arrow-btn"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <!-- 🟢 BANNER 4 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR BANNER DESIGN IMAGE 4 -->
+              <img src="banner 4.jpg" alt="banner" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Banner Design</h4>
+            <div class="project-cat">
+              <span>Advertising</span>
+              <span class="arrow-btn"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 2. LOGO DESIGN - 4 IMAGES -->
+      <div class="category-block">
+        <div class="category-title"><i class="fas fa-tag"></i> Logo Design</div>
+        <div class="project-grid-4">
+          <!-- 🟢 LOGO 1 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR LOGO DESIGN IMAGE 1 -->
+              <img src="yc logo.jpeg" alt="Logo 1" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Logo Design</h4>
+            <div class="project-cat"><span>Branding</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 LOGO 2 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR LOGO DESIGN IMAGE 2 -->
+              <img src="palax logo.jpeg" alt="Logo 2" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Logo Design</h4>
+            <div class="project-cat"><span>Corporate</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 LOGO 3 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR LOGO DESIGN IMAGE 3 -->
+              <img src="sky logo.jpeg" alt="Logo 3" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Logo Design</h4>
+            <div class="project-cat"><span>Minimal</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 LOGO 4 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR LOGO DESIGN IMAGE 4 -->
+              <img src="my logo.jpg" alt="logo 4" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Logo Design</h4>
+            <div class="project-cat"><span>Illustration</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 3. CHARACTER DESIGN - 4 IMAGES -->
+      <div class="category-block">
+        <div class="category-title"><i class="fas fa-user-astronaut"></i> Character Design</div>
+        <div class="project-grid-4">
+          <!-- 🟢 CHARACTER 1 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR CHARACTER DESIGN IMAGE 1 -->
+            <img src="characters.jpeg" alt="characters1" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Character</h4>
+            <div class="project-cat"><span>Mascot</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 CHARACTER 2 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR CHARACTER DESIGN IMAGE 2 -->
+               <img src="character 2.jpg" alt="characters2" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Character</h4>
+            <div class="project-cat"><span>Cartoon</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 CHARACTER 3 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR CHARACTER DESIGN IMAGE 3 -->
+               <img src="ch3.jpg" alt="characters1" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Character</h4>
+            <div class="project-cat"><span>3D Style</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- 4. BOX DESIGN - 4 IMAGES -->
+      <div class="category-block">
+        <div class="category-title"><i class="fas fa-cube"></i> Box Design</div>
+        <div class="project-grid-4">
+          <!-- 🟢 BOX 1 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR BOX DESIGN IMAGE 1 -->
+              <img src="box1.jpeg" alt="box1" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Box Design</h4>
+            <div class="project-cat"><span>Packaging</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 BOX 2 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR BOX DESIGN IMAGE 2 -->
+               <img src="box 2.jpg" alt="box2" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Box Design</h4>
+            <div class="project-cat"><span>Product</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 BOX 3 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR BOX DESIGN IMAGE 3 -->
+              <img src="box 3.jpg" alt="box3" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Box Design</h4>
+            <div class="project-cat"><span>Box</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+         
+        </div>
+      </div>
+      
+      <!-- 5. CARD DESIGN - 4 IMAGES -->
+      <div class="category-block">
+        <div class="category-title"><i class="fas fa-id-card"></i> Card Design</div>
+        <div class="project-grid-4">
+          <!-- 🟢 CARD 1 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR CARD DESIGN IMAGE 1 -->
+              <img src="cards.jpg" alt="cards" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Card Design</h4>
+            <div class="project-cat"><span>Business</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 CARD 2 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR CARD DESIGN IMAGE 2 -->
+              <img src="cards 2.jpg" alt="CARD" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Card Design</h4>
+            <div class="project-cat"><span>Greeting</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 CARD 3 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR CARD DESIGN IMAGE 3 -->
+              <img src="card 3.jpg" alt="Card" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Card Design</h4>
+            <div class="project-cat"><span>Invitation</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+          <!-- 🟢 CARD 4 -->
+          <div class="project-card">
+            <div class="project-img" onclick="openFullscreen(this)">
+              <!-- 🔵🔵🔵 REPLACE WITH YOUR CARD DESIGN IMAGE 4 -->
+               <img src="card 4.jpg" alt="card" style="width:100%; height:100%; object-fit: cover;">
+              <span style="position: absolute; bottom: 10px;"></span>
+              <!-- 🔵🔵🔵 -->
+            </div>
+            <h4>Card Design</h4>
+            <div class="project-cat"><span>Minimal</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <div id="services" class="services-section" style="scroll-margin-top: 80px;">
+      <h2 class="section-title">SERVICES I PROVIDE</h2>
+      <div class="services-grid">
+        <div class="service-card"><i class="fas fa-paint-brush"></i><h3>Brand Identity</h3><p>Logo, color, typography – complete visual identity.</p></div>
+        <div class="service-card"><h3>Adobe Photoshop , Adobe illustrator</h3></div>
+        <div class="service-card"><i class="fas fa-cube"></i><h3>Packaging</h3><p>Product boxes, labels, and custom packaging.</p></div>
+        <div class="service-card"><i class="fas fa-print"></i><h3>Print Design</h3><p>Brochures, flyers, business cards.</p></div>
+        <div class="service-card"><i class="fas fa-ad"></i><h3>Social Media</h3><p>Banners, ads, and engaging creatives.</p></div>
+        <div class="service-card"><i class="fas fa-chart-line"></i><h3>Marketing</h3><p>Visual strategy for brands.</p></div>
+      </div>
+    </div>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <div id="contact" class="contact-section" style="scroll-margin-top: 80px;">
+      <div class="contact-left">
+        <h3>Let's work together</h3>
+        <div class="contact-email">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:muhammadnomankhan.mail@gmail.com">muhammadnomankhan.mail@gmail.com</a>
+        </div>
+        <div class="contact-wa">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/923125693282?text=Hi%20Noman,%20I%20need%20graphic%20design%20services" target="_blank">+92 312 5693282</a>
+        </div>
+        <p style="margin-top: 20px; color: #b2d9ff; font-size: 0.9rem;">Click to chat directly on WhatsApp</p>
+      </div>
+      <div style="display: flex; gap: 25px;">
+        <a href="#" style="background: rgba(0,119,255,0.2); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #b5e1ff;"><i class="fas fa-comment-dots fa-2x"></i></a>
+      </div>
+    </div>
+
+    <!-- ===== ALL RIGHTS RECEIVED FOOTER ===== -->
+    <div class="rights-footer">
+      <i class="fas fa-copyright"></i> 2026 MUHAMMAD NOMAN KHAN — GRAPHIC DESIGNER. ALL RIGHTS RECEIVED.
+    </div>
+  </div> <!-- container -->
+
+  <script>
+    // ===== FULLSCREEN IMAGE VIEWER =====
+    const viewer = document.getElementById('fullscreenViewer');
+    const fullscreenImg = document.getElementById('fullscreenImage');
+
+    function openFullscreen(element) {
+      // Find the image inside the clicked project-img div
+      const img = element.querySelector('img');
+      
+      if (img && img.src) {
+        // If there's an actual image, show it
+        fullscreenImg.src = img.src;
+        viewer.classList.add('active');
+      } else {
+        // If no image yet (placeholder), show a message or just the icon
+        alert('Please replace this placeholder with your actual design image first.');
+      }
+    }
+
+    function closeFullscreen(e) {
+      if (e) e.stopPropagation();
+      viewer.classList.remove('active');
+      fullscreenImg.src = '';
+    }
+
+    // Close when clicking on the background (but not on the image)
+    viewer.addEventListener('click', function(e) {
+      if (e.target === viewer) {
+        closeFullscreen();
+      }
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && viewer.classList.contains('active')) {
+        closeFullscreen();
+      }
+    });
+  </script>
+</body>
+</html>
