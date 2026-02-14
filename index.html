@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>Muhammad Noman Khan · Graphic Designer</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    /* ========== STYLES ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 20% 30%, #0b1423, #030812);
+      background-color: #050a14;
+      color: #eef2fb;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      width: 60vw;
+      height: 60vw;
+      top: -10vh;
+      right: -10vw;
+      background: radial-gradient(circle, rgba(0,180,255,0.02) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      width: 80vmax;
+      height: 80vmax;
+      left: -20%;
+      bottom: -10%;
+      background: radial-gradient(circle, rgba(0,150,255,0.015) 0%, transparent 80%);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .thin-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .thin-lines span {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: rgba(0, 191, 255, 0.06);
+      left: 15%;
+    }
+    .thin-lines span:nth-child(2) { left: 40%; width: 1px; background: rgba(0,191,255,0.04); }
+    .thin-lines span:nth-child(3) { left: 70%; width: 1px; background: rgba(0,191,255,0.03); }
+    .thin-lines span:nth-child(4) { left: 90%; width: 1px; background: rgba(0,191,255,0.02); }
+    .thin-lines span:nth-child(5) { left: 5%; width: 1px; background: rgba(0,191,255,0.02); }
+    .thin-lines hr {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: rgba(0,191,255,0.05);
+      border: none;
+      top: 30%;
+    }
+    .thin-lines hr:nth-child(7) { top: 70%; background: rgba(0,191,255,0.03); }
+    .thin-lines hr:nth-child(8) { top: 85%; background: rgba(0,191,255,0.02); }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 30px;
+      position: relative;
+      z-index: 10;
+    }
+    /* ========== MODERN PROFESSIONAL NAVIGATION ========== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0 20px;
+      flex-wrap: wrap;
+      animation: fadeDown 0.9s ease;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.9rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff, #a0d0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 2px 10px rgba(0,160,255,0.3);
+    }
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      font-weight: 500;
+      background: rgba(10, 25, 45, 0.4);
+      backdrop-filter: blur(12px);
+      padding: 8px 16px;
+      border-radius: 80px;
+      border: 1px solid rgba(0, 191, 255, 0.15);
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.05);
+    }
+    .nav-page {
+      text-decoration: none;
+      color: #cddfff;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 10px 22px;
+      border-radius: 60px;
+      transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+      letter-spacing: 0.3px;
+      position: relative;
+      background: transparent;
+      border: none;
+      white-space: nowrap;
+    }
+    .nav-page:hover {
+      background: rgba(0, 119, 255, 0.15);
+      color: white;
+      box-shadow: 0 0 15px rgba(0,160,255,0.3);
+      border-color: transparent;
+    }
+    .nav-page.active-link {
+      background: linear-gradient(145deg, #0077ff, #0060dd);
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(0,119,255,0.4), inset 0 1px 2px rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .lets-talk {
+      background: rgba(0, 119, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 12px 32px;
+      border-radius: 60px;
+      color: #ffffff !important;
+      border: 1px solid rgba(0,180,255,0.3);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: 0.25s;
+      box-shadow: 0 6px 18px rgba(0,80,160,0.2);
+    }
+    .lets-talk:hover {
+      background: #0077ff;
+      color: white !important;
+      border-color: #0077ff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0,119,255,0.4);
+    }
+    .btn-blue {
+      background: #0077ff;
+      border: none;
+      border-radius: 50px;
+      padding: 16px 38px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 20px rgba(0,119,255,0.25);
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .btn-blue i { font-size: 1.1rem; }
+    .btn-blue:hover {
+      background: #0060dd;
+      transform: scale(1.02);
+      box-shadow: 0 14px 28px rgba(0,119,255,0.35);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 40px 0 80px;
+      align-items: center;
+    }
+    .hero-left .small-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #a0ceff;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .hero-left h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: white;
+      margin-bottom: 15px;
+    }
+    .blue-highlight {
+      color: #3aa8ff;
+      display: block;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: #b8d6ff;
+      max-width: 90%;
+      margin: 25px 0 30px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+    .social-icons {
+      display: flex;
+      gap: 18px;
+      margin-top: 30px;
+    }
+    .social-icons a {
+      background: rgba(255,255,255,0.04);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bee0ff;
+      font-size: 1.25rem;
+      border: 0.5px solid rgba(0,191,255,0.2);
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      background: #0077ff;
+      color: white;
+      border-color: #0077ff;
+      transform: translateY(-3px);
+    }
+    .hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .decor-line-bg span {
+      position: absolute;
+      width: 200px;
+      height: 2px;
+      background: rgba(0,191,255,0.15);
+      transform: rotate(-25deg);
+    }
+    .decor-line-bg span:nth-child(1) { top: 20px; left: -30px; width: 280px; }
+    .decor-line-bg span:nth-child(2) { bottom: 30px; right: -20px; width: 240px; transform: rotate(15deg); background: rgba(0,191,255,0.1); }
+    .decor-line-bg span:nth-child(3) { top: 50%; left: -40px; width: 150px; transform: rotate(45deg); background: rgba(0,191,255,0.08); }
+    .portrait-card {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #0d1a2b, #030c17);
+      padding: 12px;
+      box-shadow: 0 30px 40px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(0,180,255,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s;
+    }
+    .portrait-card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 40px 60px -15px #0055aa30;
+    }
+    .portrait-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      display: block;
+      object-fit: cover;
+    }
+    .adobe-strip {
+      background: rgba(10, 25, 45, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 80px;
+      padding: 30px 40px;
+      margin: 20px 0 70px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      border: 0.5px solid rgba(255,255,255,0.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: fadeUp 1s ease;
+    }
+    .adobe-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #b0e0ff;
+      transition: 0.2s;
+    }
+    .adobe-item i {
+      font-size: 2.4rem;
+      color: #31a8ff;
+    }
+    .adobe-item span {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+    .adobe-item:hover i { color: #9dc6ff; transform: scale(1.05); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      margin: 100px 0;
+      align-items: center;
+    }
+    .about-img {
+      background: #0a1624;
+      border-radius: 32px;
+      padding: 14px;
+      box-shadow: 0 25px 35px -10px black;
+    }
+    .about-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 28px;
+      display: block;
+    }
+    .about-right h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .about-right h2 span { color: #3aa8ff; }
+    .stats {
+      display: flex;
+      gap: 25px;
+      margin: 35px 0 30px;
+    }
+    .stat-card {
+      background: rgba(0,191,255,0.05);
+      padding: 24px 15px;
+      border-radius: 28px;
+      flex: 1;
+      backdrop-filter: blur(5px);
+      border: 0.5px solid rgba(0,191,255,0.1);
+      transition: 0.25s;
+      text-align: center;
+    }
+    .stat-card:hover {
+      background: rgba(0,119,255,0.1);
+      border-color: #3aa8ff;
+      transform: translateY(-6px);
+    }
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #aad0ff;
+    }
+    /* portfolio - grid for 10 and 3 items */
+    .portfolio-grid-wrapper {
+      margin: 80px 0 40px;
+      scroll-margin-top: 80px;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+      border-left: 6px solid #3aa8ff;
+      padding-left: 20px;
+    }
+    .category-block { margin-bottom: 70px; }
+    .category-title {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .category-title i { color: #3aa8ff; font-size: 1.9rem; }
+    .project-grid-10 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+    }
+    .project-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+    @media (max-width: 1100px) {
+      .project-grid-10 { grid-template-columns: repeat(3, 1fr); }
+      .project-grid-3 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .project-grid-10 { grid-template-columns: repeat(2, 1fr); }
+      .project-grid-3 { grid-template-columns: 1fr; }
+    }
+    .project-card {
+      background: rgba(12, 25, 40, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: 24px;
+      padding: 16px;
+      border: 1px solid rgba(0,191,255,0.05);
+      box-shadow: 0 20px 30px -10px #00000050;
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .project-card:hover {
+      background: #0f1f32;
+      border-color: rgba(0,191,255,0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 32px 45px -10px #004a9930;
+    }
+    .project-img {
+      background: linear-gradient(145deg, #142a3b, #0a1a28);
+      border-radius: 18px;
+      height: 150px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #c1e1ff;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .project-img i { font-size: 2.8rem; opacity: 0.7; margin-bottom: 6px; }
+    .project-img span {
+      font-size: 0.75rem;
+      background: rgba(0,119,255,0.3);
+      padding: 4px 12px;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
+    .project-card h4 { font-size: 1.2rem; font-weight: 600; margin-bottom: 4px; color: white; }
+    .project-cat {
+      color: #8bc9ff;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .arrow-btn {
+      background: #0077ff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: 0.2s;
+    }
+    .project-card:hover .arrow-btn { background: #2590ff; }
+    .services-section {
+      margin: 100px 0;
+      scroll-margin-top: 80px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: rgba(8, 22, 40, 0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 32px;
+      padding: 40px 30px;
+      border: 1px solid rgba(0,191,255,0.08);
+      transition: 0.3s;
+      text-align: center;
+    }
+    .service-card:hover {
+      border-color: #3aa8ff;
+      background: rgba(0,119,255,0.08);
+      transform: translateY(-8px);
+    }
+    .service-card i {
+      font-size: 2.8rem;
+      color: #3aa8ff;
+      margin-bottom: 20px;
+    }
+    .service-card h3 { font-size: 1.6rem; margin-bottom: 12px; }
+    .service-card p { color: #b0d0ff; font-size: 0.95rem; }
+    .contact-section {
+      background: rgba(5,15,30,0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 60px;
+      padding: 60px 70px;
+      margin: 70px 0 60px;
+      border: 1px solid rgba(0,191,255,0.12);
+      box-shadow: 0 30px 50px -30px black;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      scroll-margin-top: 80px;
+    }
+    .contact-left h3 { font-size: 1.6rem; font-weight: 500; margin-bottom: 20px; }
+    .contact-email, .contact-wa {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 1.25rem;
+      background: rgba(255,255,255,0.02);
+      padding: 18px 26px;
+      border-radius: 60px;
+      margin: 15px 0;
+      border: 0.5px solid rgba(0,191,255,0.1);
+      transition: 0.15s;
+    }
+    .contact-email:hover, .contact-wa:hover {
+      background: rgba(0,119,255,0.1);
+      border-color: #3aa8ff;
+    }
+    .contact-email i, .contact-wa i { font-size: 1.8rem; color: #3aa8ff; }
+    .contact-email a, .contact-wa a {
+      text-decoration: none;
+      color: #ecf7ff;
+      font-weight: 500;
+    }
+    /* ===== CLIENTS & REVIEWS SECTION - icons only ===== */
+    .clients-reviews-section {
+      margin: 100px 0;
+      scroll-margin-top: 80px;
+    }
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      margin: 40px 0 60px;
+    }
+    .client-item {
+      background: rgba(255,255,255,0.02);
+      border-radius: 28px;
+      padding: 25px 10px;
+      text-align: center;
+      border: 1px solid rgba(0,191,255,0.05);
+      transition: 0.2s;
+      backdrop-filter: blur(4px);
+    }
+    .client-item:hover {
+      border-color: #3aa8ff;
+      background: rgba(0,119,255,0.05);
+    }
+    .client-item i {
+      font-size: 3.5rem;
+      color: #3aa8ff;
+      margin-bottom: 15px;
+      background: rgba(0,119,255,0.1);
+      padding: 20px;
+      border-radius: 50%;
+    }
+    .client-item p.name {
+      font-weight: 600;
+      color: white;
+      margin-bottom: 5px;
+    }
+    .client-item p.position {
+      font-size: 0.75rem;
+      color: #aac8ff;
+      letter-spacing: 1px;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .review-card {
+      background: rgba(10,25,45,0.6);
+      backdrop-filter: blur(6px);
+      border-radius: 30px;
+      padding: 30px;
+      border: 1px solid rgba(0,191,255,0.1);
+    }
+    .review-card i.fa-quote-left {
+      color: #3aa8ff;
+      font-size: 1.8rem;
+      opacity: 0.4;
+      margin-bottom: 10px;
+    }
+    .review-text {
+      font-style: italic;
+      color: #d4ecff;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .reviewer i {
+      font-size: 2.2rem;
+      color: #3aa8ff;
+      background: rgba(0,119,255,0.1);
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .reviewer h4 { color: white; font-weight: 600; font-size: 1rem; }
+    .reviewer span { font-size: 0.8rem; color: #97c3ff; }
+    /* ===== fullscreen viewer ===== */
+    .fullscreen-viewer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .fullscreen-viewer.active { display: flex; }
+    .fullscreen-viewer img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(0,119,255,0.3);
+    }
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: white;
+      font-size: 3rem;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(0,119,255,0.2);
+    }
+    .close-btn:hover {
+      background: #0077ff;
+      transform: scale(1.1);
+    }
+    .rights-footer {
+      text-align: center;
+      padding: 30px 0 40px;
+      color: #9cb8d9;
+      border-top: 0.5px solid rgba(0,191,255,0.1);
+      margin-top: 20px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    .rights-footer i { color: #3aa8ff; margin: 0 6px; }
+
+    /* ===== page toggle ===== */
+    .page {
+      display: none;
+    }
+    .page.active-page {
+      display: block;
+    }
+
+    @keyframes fadeDown {
+      0% { opacity: 0; transform: translateY(-18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hero, .about-grid, .portfolio-grid-wrapper, .services-section, .contact-section, .clients-reviews-section {
+      animation: fadeUp 0.9s ease;
+    }
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .contact-section { padding: 40px 25px; }
+      .stats { flex-direction: column; }
+      .adobe-strip { gap: 30px; }
+      .close-btn { top: 20px; right: 20px; font-size: 2.5rem; }
+      .clients-grid { grid-template-columns: repeat(2, 1fr); }
+      .review-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="thin-lines"><span></span><span></span><span></span><span></span><span></span><hr><hr><hr></div>
+
+  <!-- fullscreen viewer -->
+  <div id="fullscreenViewer" class="fullscreen-viewer" onclick="closeFullscreen()">
+    <span class="close-btn" onclick="closeFullscreen(event)">&times;</span>
+    <img id="fullscreenImage" src="" alt="Fullscreen View">
+  </div>
+
+  <div class="container">
+    <!-- ===== MODERN PROFESSIONAL NAVIGATION ===== -->
+    <nav>
+      <div class="logo">NOMAN.</div>
+      <div class="nav-links">
+        <a href="#" data-page="home" class="nav-page active-link">HOME</a>
+        <a href="#" data-page="about" class="nav-page">ABOUT ME</a>
+        <a href="#" data-page="portfolio" class="nav-page">PROJECTS</a>
+        <a href="#" data-page="services" class="nav-page">SERVICES</a>
+        <a href="#" data-page="clients" class="nav-page">CLIENTS</a>
+        <a href="#" data-page="contact" class="nav-page">CONTACT</a>
+      </div>
+      <a href="#" data-page="contact" class="lets-talk nav-page">LET'S TALK</a>
+    </nav>
+
+    <!-- ===== PAGE: HOME ===== -->
+    <div id="page-home" class="page active-page">
+      <div class="hero" style="scroll-margin-top: 70px;">
+        <div class="hero-left">
+          <div class="small-label">MUHAMMAD NOMAN KHAN</div>
+          <h1>HAY! I’M <br>MUHAMMAD NOMAN KHAN <span class="blue-highlight">I’M A GRAPHIC DESIGNER</span></h1>
+          <p class="hero-desc">I have strong knowledge and professional grip in Adobe Photoshop and Adobe Illustrator with 4 years of experience. I have successfully completed many creative design projects.</p>
+          <a href="#" data-page="contact" class="nav-page" style="text-decoration: none;"><button class="btn-blue"><i class="fas fa-paper-plane"></i> GET IN TOUCH</button></a>
+          <div class="social-icons">
+            <a href="https://linkedin.com/in/muhammadnoman-khan-07716628a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:muhammadnomankhan.mail@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="decor-line-bg"><span></span><span></span><span></span></div>
+          <div class="portrait-card">
+            <!-- 📸 PORTRAIT IMAGE - REPLACE WITH YOUR PHOTO -->
+            <img src="ppppp.jpg" alt="Muhammad Noman Khan">
+          </div>
+        </div>
+      </div>
+      <div class="adobe-strip">
+        <div class="adobe-item"><i class="fab fa-adobe"></i><span>Photoshop</span></div>
+        <div class="adobe-item"><i class="fab fa-adobe"></i><span>Illustrator</span></div>
+        <div class="adobe-item"><i class="fas fa-paint-brush"></i><span>Creative</span></div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE: ABOUT ===== -->
+    <div id="page-about" class="page">
+      <div class="about-grid">
+        <div class="about-img">
+          <!-- 📸 ABOUT PAGE IMAGE - REPLACE WITH YOUR PHOTO -->
+          <img src="ppppp.jpg" alt="about">
+        </div>
+        <div class="about-right">
+          <h2>I AM AVAILABLE FOR <span>GRAPHIC DESIGN PROJECTS</span></h2>
+          <p style="color: #b8d6ff;">I’m Muhammad Noman Khan, a dedicated Graphic Designer and Illustrator with over four years of experience transforming concepts into compelling visuals. My toolkit is built around mastery of Adobe Photoshop and Illustrator, which I use to bridge the gap between a client's vision and a design that resonates.<br><br>My passion lies in solving visual problems through creativity. Whether you need a memorable brand identity, engaging marketing materials, or custom artwork, I bring a meticulous eye for detail and a commitment to quality to every project. I specialize in a wide array of services, including Logo Design, Character Design, Banner & Card Design, Illustrations, CV & Resume Design, Thumbnail Design, and advanced Picture Editing. Let’s collaborate to create something striking that helps you stand out.</p>
+          <div class="stats">
+            <div class="stat-card"><div class="stat-number" id="stat-years" data-target="4">0</div><div class="stat-label">Years Experience</div></div>
+            <div class="stat-card"><div class="stat-number" id="stat-projects" data-target="128">0</div><div class="stat-label">Projects Completed</div></div>
+            <div class="stat-card"><div class="stat-number" id="stat-clients" data-target="72">0</div><div class="stat-label">Happy Clients</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE: PORTFOLIO - FULL PROJECTS WITH NEW SECTIONS ===== -->
+    <div id="page-portfolio" class="page">
+      <div class="portfolio-grid-wrapper">
+        <h2 class="section-title">My latest Delivered Designs are shown below in the Portfolio.</h2>
+        
+        <!-- 1. BANNER DESIGN - 10 IMAGES -->
+        <div class="category-block">
+          <div class="category-title"><i class="fas fa-images"></i> Banner Design </div>
+          <div class="project-grid-10">
+            <!-- 📸 BANNER 1-10 - PLACE YOUR BANNER IMAGES HERE -->
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="youtube banner (1).jpeg" alt="Banner 1"><span>Banner 1</span></div><h4>Banner Design</h4><div class="project-cat"><span>Social Media</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="banner2.jpeg" alt="Banner 2"><span>Banner 2</span></div><h4>Banner Design</h4><div class="project-cat"><span>Web Banner</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="banner3.jpg" alt="Banner 3"><span>Banner 3</span></div><h4>Banner Design</h4><div class="project-cat"><span>Event</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="banner 4.jpg" alt="Banner 4"><span>Banner 4</span></div><h4>Banner Design</h4><div class="project-cat"><span>Advertising</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="b5.jpg" alt="Banner 5"><span>Banner 5</span></div><h4>Banner Design</h4><div class="project-cat"><span>Social Media</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="b6.jpg" alt="Banner 6"><span>Banner 6</span></div><h4>Banner Design</h4><div class="project-cat"><span>Web Banner</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="b7.jpg" alt="Banner 7"><span>Banner 7</span></div><h4>Banner Design</h4><div class="project-cat"><span>Event</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="b8.jpg" alt="Banner 8"><span>Banner 8</span></div><h4>Banner Design</h4><div class="project-cat"><span>Advertising</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="b9.jpg" alt="Banner 9"><span>Banner 9</span></div><h4>Banner Design</h4><div class="project-cat"><span>Social Media</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="baa333.jpg" alt="Banner 10"><span>Banner 10</span></div><h4>Banner Design</h4><div class="project-cat"><span>Web Banner</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+          </div>
+        </div>
+        
+        <!-- 2. LOGO DESIGN - 10 IMAGES -->
+        <div class="category-block">
+          <div class="category-title"><i class="fas fa-tag"></i> Logo Design </div>
+          <div class="project-grid-10">
+            <!-- 📸 LOGO 1-10 - PLACE YOUR LOGO IMAGES HERE -->
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="my logo.jpg" alt="Logo 1"><span>Logo 1</span></div><h4>Logo Design</h4><div class="project-cat"><span>Branding</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="yc logo.jpeg" alt="Logo 2"><span>Logo 2</span></div><h4>Logo Design</h4><div class="project-cat"><span>Corporate</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="sky logo.jpeg" alt="Logo 3"><span>Logo 3</span></div><h4>Logo Design</h4><div class="project-cat"><span>Minimal</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="palax logo.jpeg" alt="Logo 4"><span>Logo 4</span></div><h4>Logo Design</h4><div class="project-cat"><span>Illustration</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="l5.jpg" alt="Logo 5"><span>Logo 5</span></div><h4>Logo Design</h4><div class="project-cat"><span>Branding</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="l6.jpg" alt="Logo 6"><span>Logo 6</span></div><h4>Logo Design</h4><div class="project-cat"><span>Corporate</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="l7.jpg" alt="Logo 7"><span>Logo 7</span></div><h4>Logo Design</h4><div class="project-cat"><span>Minimal</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="l8.jpg" alt="Logo 8"><span>Logo 8</span></div><h4>Logo Design</h4><div class="project-cat"><span>Illustration</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="l9.jpg" alt="Logo 9"><span>Logo 9</span></div><h4>Logo Design</h4><div class="project-cat"><span>Branding</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="l10.jpg" alt="Logo 10"><span>Logo 10</span></div><h4>Logo Design</h4><div class="project-cat"><span>Corporate</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+          </div>
+        </div>
+        
+        <!-- 3. CARD DESIGN - 10 IMAGES -->
+        <div class="category-block">
+          <div class="category-title"><i class="fas fa-id-card"></i> Card Design </div>
+          <div class="project-grid-10">
+            <!-- 📸 CARD 1-10 - PLACE YOUR CARD IMAGES HERE -->
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="cards.jpg" alt="Card 1"><span>Card 1</span></div><h4>Card Design</h4><div class="project-cat"><span>Business</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="cards 2.jpg" alt="Card 2"><span>Card 2</span></div><h4>Card Design</h4><div class="project-cat"><span>Greeting</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="card 4.jpg" alt="Card 3"><span>Card 3</span></div><h4>Card Design</h4><div class="project-cat"><span>Invitation</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="c4.jpg" alt="Card 4"><span>Card 4</span></div><h4>Card Design</h4><div class="project-cat"><span>Minimal</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="c5.jpg" alt="Card 5"><span>Card 5</span></div><h4>Card Design</h4><div class="project-cat"><span>Business</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="c6.jpg" alt="Card 6"><span>Card 6</span></div><h4>Card Design</h4><div class="project-cat"><span>Greeting</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="c7.jpg" alt="Card 7"><span>Card 7</span></div><h4>Card Design</h4><div class="project-cat"><span>Invitation</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="c8.jpg" alt="Card 8"><span>Card 8</span></div><h4>Card Design</h4><div class="project-cat"><span>Minimal</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="c9.jpg" alt="Card 9"><span>Card 9</span></div><h4>Card Design</h4><div class="project-cat"><span>Business</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="c10.jpg" alt="Card 10"><span>Card 10</span></div><h4>Card Design</h4><div class="project-cat"><span>Greeting</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+          </div>
+        </div>
+
+        <!-- 4. CHARACTER DESIGN - 3 IMAGES (NEW) -->
+        <div class="category-block">
+          <div class="category-title"><i class="fas fa-user-astronaut"></i> Character Design </div>
+          <div class="project-grid-3">
+            <!-- 📸 CHARACTER 1-3 - PLACE YOUR CHARACTER IMAGES HERE -->
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="characters.jpeg" alt="Character 1"><span>Character 1</span></div><h4>Character Design</h4><div class="project-cat"><span>Mascot</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="character 2.jpg" alt="Character 2"><span>Character 2</span></div><h4>Character Design</h4><div class="project-cat"><span>Cartoon</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="ch3.jpg" alt="Character 3"><span>Character 3</span></div><h4>Character Design</h4><div class="project-cat"><span>3D Style</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+          </div>
+        </div>
+
+        <!-- 5. BOX DESIGN - 3 IMAGES (NEW) -->
+        <div class="category-block">
+          <div class="category-title"><i class="fas fa-cube"></i> Box Design </div>
+          <div class="project-grid-3">
+            <!-- 📸 BOX 1-3 - PLACE YOUR BOX/PACKAGING IMAGES HERE -->
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="box1.jpeg" alt="Box 1"><span>Box 1</span></div><h4>Box Design</h4><div class="project-cat"><span>Packaging</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="box 2.jpg" alt="Box 2"><span>Box 2</span></div><h4>Box Design</h4><div class="project-cat"><span>Product</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="box 3.jpg" alt="Box 3"><span>Box 3</span></div><h4>Box Design</h4><div class="project-cat"><span>Box</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+          </div>
+        </div>
+        
+        <!-- 6. THUMBNAILS - 10 IMAGES (replaces CV & Resume) -->
+        <div class="category-block">
+          <div class="category-title"><i class="fas fa-image"></i> Thumbnails </div>
+          <div class="project-grid-10">
+            <!-- 📸 THUMBNAIL 1-10 - PLACE YOUR THUMBNAIL IMAGES HERE -->
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t1.avif" alt="Thumbnail 1"><span>Thumb 1</span></div><h4>Thumbnail</h4><div class="project-cat"><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t2.avif" alt="Thumbnail 2"><span>Thumb 2</span></div><h4>Thumbnail</h4><div class="project-cat"><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t3.avif" alt="Thumbnail 3"><span>Thumb 3</span></div><h4>Thumbnail</h4><div class="project-cat"><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t4.avif" alt="Thumbnail 4"><span>Thumb 4</span></div><h4>Thumbnail</h4><div class="project-cat"><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t5.avif" alt="Thumbnail 5"><span>Thumb 5</span></div><h4>Thumbnail</h4><div class="project-cat"><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t6.avif" alt="Thumbnail 6"><span>Thumb 6</span></div><h4>Thumbnail</h4><div class="project-cat"><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t7.avif" alt="Thumbnail 7"><span>Thumb 7</span></div><h4>Thumbnail</h4><div class="project-cat"><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t8.avif" alt="Thumbnail 8"><span>Thumb 8</span></div><h4>Thumbnail</h4><div class="project-cat"><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t9.avif" alt="Thumbnail 9"><span>Thumb 9</span></div><h4>Thumbnail</h4><div class="project-cat"><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+            <div class="project-card"><div class="project-img" onclick="openFullscreen(this)"><img src="t10.avif" alt="Thumbnail 10"><span>Thumb 10</span></div><h4>Thumbnail</h4><div class="project-cat"><span>Social</span><span class="arrow-btn"><i class="fas fa-arrow-right"></i></span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE: SERVICES ===== -->
+    <div id="page-services" class="page">
+      <div class="services-section">
+        <h2 class="section-title">SERVICES I PROVIDE</h2>
+        <div class="services-grid">
+          <div class="service-card"><i class="fas fa-paint-brush"></i><h3>Brand Identity</h3><p>Logo, color, typography – complete visual identity.</p></div>
+          <div class="service-card"><i class="fas fa-pen-fancy"></i><h3>Adobe Suite</h3><p>Photoshop · Illustrator expert</p></div>
+          <div class="service-card"><i class="fas fa-cube"></i><h3>Packaging</h3><p>Product boxes, labels, and custom packaging.</p></div>
+          <div class="service-card"><i class="fas fa-print"></i><h3>Print Design</h3><p>Brochures, flyers, business cards.</p></div>
+          <div class="service-card"><i class="fas fa-ad"></i><h3>Social Media</h3><p>Banners, ads, and engaging creatives.</p></div>
+          <div class="service-card"><i class="fas fa-chart-line"></i><h3>Marketing</h3><p>Visual strategy for brands.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE: CLIENTS (10 clients with icons) ===== -->
+    <div id="page-clients" class="page">
+      <div class="clients-reviews-section">
+        <h2 class="section-title">Clients I've worked with</h2>
+        <!-- 10 CLIENTS WITH ICONS (no photos) -->
+        <div class="clients-grid">
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">James Anderson</p></div>
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">Emily Clarkson</p></div>
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">Michael Chen</p></div>
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">Sarah Williams</p></div>
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">David Thompson</p></div>
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">Jessica Parker</p></div>
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">Robert Turner</p></div>
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">Ahmed Raza</p></div>
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">Fatima Khan</p></div>
+          <div class="client-item"><i class="fas fa-user-circle"></i><p class="name">Bilal Ahmed</p></div>
+        </div>
+        <!-- 10 REVIEWS (testimonials) with icons -->
+        <h2 class="section-title" style="margin-top: 30px;">What clients say</h2>
+        <div class="review-grid">
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">Noman redesigned our entire brand identity. The new logo and packaging increased our recognition by 40%. Exceptional work!</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>James Anderson </h4></div></div>
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">The illustrations he created for our ad campaign were stunning. Very creative and delivered before deadline. Highly recommend.</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>Emily Clarkson </h4></div></div>
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">Noman designed a minimalist logo that perfectly represents our company values. Clean, modern and timeless.</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>Michael Chen</h4></div></div>
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">We needed a series of social media banners for a product launch. Noman delivered 10 variations and they performed great!</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>Sarah Williams </h4></div></div>
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">His character design for our children's app was exactly what we envisioned. Professional and easy to work with.</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>David Thompson </h4></div></div>
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">The business card and stationery set Noman designed gave our brand a premium feel. Quality work!</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>Jessica Parker </h4></div></div>
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">I hired Noman for a complete brochure design. He understood our target audience and delivered an outstanding layout.</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>Robert Turner </h4></div></div>
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">Noman did a fantastic job on the logo design. He delivered the whole branding package on time and it was very professional. Thanks a lot!</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>Ahmed Raza </h4></div></div>
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">The banners and flyers Noman designed for my art gallery were absolutely fantastic. Everyone keeps complimenting them!</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>Fatima Khan </h4></div></div>
+          <div class="review-card"><i class="fas fa-quote-left"></i><p class="review-text">Noman designed the packaging boxes for my products and the results were amazing! The quality and creativity were both top-notch. Highly recommended!</p><div class="reviewer"><i class="fas fa-user-circle"></i><h4>Bilal Ahmed </h4></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE: CONTACT ===== -->
+    <div id="page-contact" class="page">
+      <div class="contact-section">
+        <div class="contact-left">
+          <h3>Let's work together</h3>
+          <div class="contact-email"><i class="fas fa-envelope"></i><a href="mailto:muhammadnomankhan.mail@gmail.com">muhammadnomankhan.mail@gmail.com</a></div>
+          <div class="contact-wa"><i class="fab fa-whatsapp"></i><a href="https://wa.me/923125693282?text=Hi%20Noman,%20I%20need%20graphic%20design%20services" target="_blank">+92 312 5693282</a></div>
+          <p style="margin-top: 20px; color: #b2d9ff; font-size: 0.9rem;">Click to chat directly on WhatsApp</p>
+        </div>
+        <div style="display: flex; gap: 25px;"><a href="#" style="background: rgba(0,119,255,0.2); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #b5e1ff;"><i class="fas fa-comment-dots fa-2x"></i></a></div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="rights-footer"><i class="fas fa-copyright"></i> 2026 MUHAMMAD NOMAN KHAN — GRAPHIC DESIGNER. ALL RIGHTS RECEIVED.</div>
+  </div>
+
+  <script>
+    // fullscreen viewer
+    const viewer = document.getElementById('fullscreenViewer');
+    const fullscreenImg = document.getElementById('fullscreenImage');
+    function openFullscreen(element) {
+      const img = element.querySelector('img');
+      if (img && img.src) { fullscreenImg.src = img.src; viewer.classList.add('active'); }
+      else { alert('Please replace placeholder with your actual design image.'); }
+    }
+    function closeFullscreen(e) { if(e) e.stopPropagation(); viewer.classList.remove('active'); fullscreenImg.src = ''; }
+    viewer.addEventListener('click', function(e) { if (e.target === viewer) closeFullscreen(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && viewer.classList.contains('active')) closeFullscreen(); });
+
+    // animated counters
+    function animateNumbers() {
+      const statYears = document.getElementById('stat-years');
+      const statProjects = document.getElementById('stat-projects');
+      const statClients = document.getElementById('stat-clients');
+      if (!statYears) return;
+      const yearsTarget = parseInt(statYears.dataset.target);
+      const projectsTarget = parseInt(statProjects.dataset.target);
+      const clientsTarget = parseInt(statClients.dataset.target);
+      let years=0, projects=0, clients=0;
+      const speed = 30;
+      const yStep = Math.ceil(yearsTarget/50), pStep = Math.ceil(projectsTarget/50), cStep = Math.ceil(clientsTarget/50);
+      const timer = setInterval(() => {
+        let finished = true;
+        if (years < yearsTarget) { years = Math.min(years+yStep, yearsTarget); statYears.innerText = years + (yearsTarget===4?'':'+'); finished=false; }
+        else statYears.innerText = yearsTarget + (yearsTarget===4?'':'+');
+        if (projects < projectsTarget) { projects = Math.min(projects+pStep, projectsTarget); statProjects.innerText = projects+'+'; finished=false; }
+        else statProjects.innerText = projectsTarget+'+';
+        if (clients < clientsTarget) { clients = Math.min(clients+cStep, clientsTarget); statClients.innerText = clients+'+'; finished=false; }
+        else statClients.innerText = clientsTarget+'+';
+        if (finished) clearInterval(timer);
+      }, speed);
+    }
+
+    // page switching
+    const pages = document.querySelectorAll('.page');
+    const navLinks = document.querySelectorAll('.nav-page');
+    function showPage(pageId) {
+      pages.forEach(p => p.classList.remove('active-page'));
+      document.getElementById('page-'+pageId).classList.add('active-page');
+      navLinks.forEach(link => {
+        link.classList.remove('active-link');
+        if (link.dataset.page === pageId) link.classList.add('active-link');
+      });
+      if (pageId === 'about') animateNumbers();
+    }
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        showPage(link.dataset.page);
+        window.scrollTo(0,0);
+      });
+    });
+    window.addEventListener('load', () => showPage('home'));
+  </script>
+</body>
+</html>
